@@ -1,0 +1,69 @@
+----------Round 1----------
+	Health: Heavy[187], Abrams[149]
+Heavy hits Abrams by 28
+HeavyUses skill: Накопичення шкоди відносно здоров'я
+Abrams hits Heavy by 51
+AbramsUses skill: Збалансоване накопичення
+
+Team1 Health:
+Heavy[136]
+
+Team2 Health:
+Abrams[124]
+Hitman[94]
+----------Round 2----------
+	Health: Heavy[136], Abrams[124]
+Heavy hits Abrams by 37
+HeavyUses skill: Накопичення шкоди відносно здоров'я
+Abrams hits Heavy by 57
+AbramsUses skill: Збалансоване накопичення
+
+Team1 Health:
+Heavy[79]
+
+Team2 Health:
+Abrams[90]
+Hitman[94]
+----------Round 3----------
+	Health: Heavy[79], Abrams[90]
+Heavy hits Abrams by 54
+HeavyUses skill: Накопичення шкоди відносно здоров'я
+Abrams hits Heavy by 65
+AbramsUses skill: Збалансоване накопичення
+
+Team1 Health:
+Heavy[14]
+
+Team2 Health:
+Abrams[39]
+Hitman[94]
+----------Round 4----------
+	Health: Heavy[14], Abrams[39]
+Heavy hits Abrams by 80
+HeavyUses skill: Накопичення шкоди відносно здоров'я
+---------------
+	Health: Heavy[14], Abrams[0]
+Heavy kills Abrams
+---------------
+
+Team1 Health:
+Heavy[14]
+
+Team2 Health:
+Abrams[0]
+Hitman[94]
+----------Round 5----------
+	Health: Heavy[14], Hitman[94]
+Heavy hits Hitman by 115
+HeavyUses skill: Накопичення шкоди відносно здоров'я
+---------------
+	Health: Heavy[14], Hitman[0]
+Heavy kills Hitman
+---------------
+
+Team1 Health:
+Heavy[14]
+
+Team2 Health:
+Abrams[0]
+Hitman[0]
