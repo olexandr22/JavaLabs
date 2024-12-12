@@ -2,6 +2,7 @@ package commands.authentificationCommands;
 
 import appLogic.UserService;
 import commands.Command;
+import menu.SubMenu;
 
 import java.util.Scanner;
 
