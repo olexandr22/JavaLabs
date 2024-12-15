@@ -2,6 +2,9 @@ package appLogic;
 
 import baseClasses.Credit;
 import commands.creditListCommands.ShowAllCreditsCommand;
+import menu.Menu;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,6 +13,7 @@ import java.util.*;
 
 public class CreditsService {
     private List<Credit> credits = new ArrayList<Credit>();
+    private static final Logger logger = LogManager.getLogger(CreditsService.class);
 
     public List<Credit> getCredits() {
         return credits;
@@ -57,27 +61,32 @@ public class CreditsService {
             }
 
         } catch (Exception e) {
-            System.out.println("Сталася помилка при зчитуванні індексів.");
+            logger.error("Критична помилка: ", e);
         }
     }
 
     public void searchCreditsByParametrs(Scanner scanner) {
-        System.out.println("Введіть параметр, по якому ви хочете знайти кредити\n1 - Проценти\n2 - Час\n3 - Максимальна сума");
-        int option = scanner.nextInt();
-        System.out.println("По зростанню?\t 1 - Tak \t 0 - Hi");
-        int asc = scanner.nextInt();
-        switch (option) {
-            case 1:
-                sortByComparator(asc, Comparator.comparingDouble(Credit::getPercents));
-                break;
-            case 2:
-                sortByComparator(asc, Comparator.comparingDouble(Credit::getTime));
-                break;
-            case 3:
-                sortByComparator(asc, Comparator.comparingDouble(Credit::getMoneyAmount));
-                break;
-            default:
-                System.out.println("Немає такого параметра");
+        try {
+            System.out.println("Введіть параметр, по якому ви хочете знайти кредити\n1 - Проценти\n2 - Час\n3 - Максимальна сума");
+            int option = scanner.nextInt();
+            System.out.println("По зростанню?\t 1 - Tak \t 0 - Hi");
+            int asc = scanner.nextInt();
+            switch (option) {
+                case 1:
+                    sortByComparator(asc, Comparator.comparingDouble(Credit::getPercents));
+                    break;
+                case 2:
+                    sortByComparator(asc, Comparator.comparingDouble(Credit::getTime));
+                    break;
+                case 3:
+                    sortByComparator(asc, Comparator.comparingDouble(Credit::getMoneyAmount));
+                    break;
+                default:
+                    System.out.println("Немає такого параметра");
+            }
+        }
+        catch (Exception e) {
+            logger.error("Критична помилка: ", e);
         }
     }
 
@@ -99,6 +108,7 @@ public class CreditsService {
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
+            logger.error("Критична помилка: ", e);
         }
     }
 }

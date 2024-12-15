@@ -1,0 +1,10 @@
+2024-12-15 21:25:04 INFO  - Програму запущено!
+2024-12-15 21:25:49 INFO  - Виконано команду: Читати кредити з файлу
+2024-12-15 21:26:30 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.execute()" because "command" is null
+	at menu.SubMenu.chooseCommand(SubMenu.java:79) ~[classes/:?]
+	at menu.SubMenu.execute(SubMenu.java:94) ~[classes/:?]
+	at commands.authentificationCommands.LogInCommand.execute(LogInCommand.java:25) ~[classes/:?]
+	at menu.Menu.chooseCommand(Menu.java:78) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:45) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]

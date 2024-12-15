@@ -5,7 +5,6 @@ import appLogic.UserService;
 import commands.Command;
 import commands.authentificationCommands.LogInCommand;
 import commands.authentificationCommands.RegistrationCommand;
-import emailService.EmailService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +13,6 @@ import java.util.*;
 public class Menu implements Command{
     protected Scanner scanner;
     private static final Logger logger = LogManager.getLogger(Menu.class);
-    private static final EmailService emailservice = new EmailService();
 
     protected CreditsService creditsService;
     protected UserService userService;
@@ -68,6 +66,7 @@ public class Menu implements Command{
             int choice = scanner.nextInt();
             scanner.nextLine();
             if (choice == 0) {
+                logger.info("Завершення програми!");
                 exit = true;
             }
 
@@ -75,12 +74,10 @@ public class Menu implements Command{
                 Command command = map.get(choice);
 
                 try {
-                    command.execute();
                     logger.info("Виконано команду: " + command.getDescription());
-                    //throw new RuntimeException("Виявлено критичну помилку!");
+                    command.execute();
                 } catch (Exception e) {
                     logger.error("Критична помилка: ", e);
-                    emailservice.sendErrorEmail("Критична помилка у програмі!", e.getMessage());
                 }
             }
         }

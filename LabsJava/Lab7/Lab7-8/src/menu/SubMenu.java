@@ -10,7 +10,6 @@ import commands.fileActionCommands.ReadCreditsFromFileCommand;
 import commands.userCreditCommans.CloseCreditCommand;
 import commands.userCreditCommans.TakeCreditCommand;
 import commands.userCreditCommans.UpdateCreditLineCommand;
-import emailService.EmailService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,7 +21,7 @@ public class SubMenu implements Command {
     protected Scanner scanner;
 
     private static final Logger logger = LogManager.getLogger(SubMenu.class);
-    private static final EmailService emailservice = new EmailService();
+
 
     protected CreditsService creditsService;
     protected UserService userService;
@@ -69,6 +68,7 @@ public class SubMenu implements Command {
             int choice = scanner.nextInt();
             scanner.nextLine();
             if (choice == 0) {
+                logger.info("Завершення програми!");
                 exit = true;
                 System.exit(0);
             }
@@ -81,7 +81,6 @@ public class SubMenu implements Command {
                     //throw new RuntimeException("Виявлено критичну помилку!");
                 } catch (Exception e) {
                     logger.error("Критична помилка: ", e);
-                    emailservice.sendErrorEmail("Критична помилка у програмі!", e.getMessage());
                 }
             }
         }
