@@ -66,7 +66,6 @@ public class Menu implements Command{
             int choice = scanner.nextInt();
             scanner.nextLine();
             if (choice == 0) {
-                logger.info("Завершення програми!");
                 exit = true;
             }
 

@@ -173,7 +173,7 @@ public class Menu {
     }
 
     public static void writeBattleTofile(){
-        try (FileWriter writer = new FileWriter("Labs/Lab3/src/ProgFiles/battleResult.txt")) {
+        try (FileWriter writer = new FileWriter("Lab3/src/ProgFiles/battleResult.txt")) {
             writer.write(battleResult);
             System.out.println("Дані успішно записані до файлу");
         } catch (IOException e) {
@@ -182,7 +182,7 @@ public class Menu {
     }
 
     public static void displayBattleFromFile(){
-        try (BufferedReader reader = new BufferedReader(new FileReader("Labs/Lab3/src/ProgFiles/battleResult.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Lab3/src/ProgFiles/battleResult.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
@@ -194,7 +194,7 @@ public class Menu {
 
     public static void writeToBinaryFile(){
         if (!droids.isEmpty()){
-            try (FileOutputStream fileOut = new FileOutputStream("Labs/Lab3/src/ProgFiles/droidList.dat");
+            try (FileOutputStream fileOut = new FileOutputStream("Lab3/src/ProgFiles/droidList.dat");
                  ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
 
                 objectOut.writeObject(droids);
@@ -207,7 +207,7 @@ public class Menu {
     }
 
     public static void readFromBinaryFile(){
-        try (FileInputStream fileIn = new FileInputStream("Labs/Lab3/src/ProgFiles/droidList.dat");
+        try (FileInputStream fileIn = new FileInputStream("Lab3/src/ProgFiles/droidList.dat");
              ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             droids = (ArrayList<Droid>) objectIn.readObject();
             System.out.println("Дані успішно зчитані з файлу");

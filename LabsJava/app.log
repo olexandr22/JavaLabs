@@ -1,0 +1,84 @@
+2024-12-15 21:30:25 INFO  - Програму запущено!
+2024-12-15 23:03:17 INFO  - Програму запущено!
+2024-12-15 23:03:20 INFO  - Виконано команду: Логін користувача
+2024-12-15 23:04:12 INFO  - Виконано команду: Оновити кредитну лінію
+2024-12-15 23:04:19 INFO  - Завершення програми!
+2024-12-15 23:15:49 INFO  - Програму запущено!
+2024-12-15 23:15:56 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.getDescription()" because "command" is null
+	at menu.Menu.chooseCommand(Menu.java:79) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:45) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-15 23:16:02 INFO  - Завершення програми!
+2024-12-15 23:47:19 INFO  - Програму запущено!
+2024-12-15 23:47:24 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.getDescription()" because "command" is null
+	at menu.Menu.chooseCommand(Menu.java:77) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 00:20:22 INFO  - Програму запущено!
+2024-12-16 00:20:26 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.getDescription()" because "command" is null
+	at menu.Menu.chooseCommand(Menu.java:77) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 00:22:19 INFO  - Програму запущено!
+2024-12-16 00:22:22 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.getDescription()" because "command" is null
+	at menu.Menu.chooseCommand(Menu.java:77) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 00:25:37 INFO  - Програму запущено!
+2024-12-16 00:26:32 INFO  - Програму запущено!
+2024-12-16 00:26:36 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.getDescription()" because "command" is null
+	at menu.Menu.chooseCommand(Menu.java:77) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 00:29:37 INFO  - Виконано команду: Логін користувача
+2024-12-16 00:31:20 INFO  - Виконано команду: Читати кредити з файлу
+2024-12-16 00:31:46 INFO  - Виконано команду: Порівняння кредитів
+2024-12-16 00:37:06 INFO  - Програму запущено!
+2024-12-16 00:37:09 INFO  - Виконано команду: Логін користувача
+2024-12-16 00:38:20 INFO  - Виконано команду: Пошук кредиту за параметрами
+2024-12-16 00:39:11 ERROR - Критична помилка: 
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at appLogic.CreditsService.searchCreditsByParametrs(CreditsService.java:73) ~[classes/:?]
+	at commands.creditListCommands.SearchCreditByParametrsCommand.execute(SearchCreditByParametrsCommand.java:19) ~[classes/:?]
+	at menu.SubMenu.chooseCommand(SubMenu.java:79) ~[classes/:?]
+	at menu.SubMenu.execute(SubMenu.java:93) ~[classes/:?]
+	at commands.authentificationCommands.LogInCommand.execute(LogInCommand.java:25) ~[classes/:?]
+	at menu.Menu.chooseCommand(Menu.java:78) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 00:39:12 INFO  - Виконано команду: Пошук кредиту за параметрами
+2024-12-16 00:39:12 ERROR - Критична помилка: 
+java.util.InputMismatchException: null
+	at java.util.Scanner.throwFor(Scanner.java:964) ~[?:?]
+	at java.util.Scanner.next(Scanner.java:1619) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2284) ~[?:?]
+	at java.util.Scanner.nextInt(Scanner.java:2238) ~[?:?]
+	at menu.SubMenu.chooseCommand(SubMenu.java:68) ~[classes/:?]
+	at menu.SubMenu.execute(SubMenu.java:93) ~[classes/:?]
+	at commands.authentificationCommands.LogInCommand.execute(LogInCommand.java:25) ~[classes/:?]
+	at menu.Menu.chooseCommand(Menu.java:78) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 13:03:06 INFO  - Програму запущено!
+2024-12-16 13:20:14 INFO  - Програму запущено!
+2024-12-16 13:20:18 INFO  - Виконано команду: Логін користувача
+2024-12-16 13:20:51 INFO  - Виконано команду: Читати кредити з файлу
+2024-12-16 13:21:00 INFO  - Виконано команду: Пошук кредиту за параметрами
+2024-12-16 13:21:13 ERROR - Критична помилка: 
+java.lang.NullPointerException: Cannot invoke "commands.Command.execute()" because "command" is null
+	at menu.SubMenu.chooseCommand(SubMenu.java:79) ~[classes/:?]
+	at menu.SubMenu.execute(SubMenu.java:93) ~[classes/:?]
+	at commands.authentificationCommands.LogInCommand.execute(LogInCommand.java:25) ~[classes/:?]
+	at menu.Menu.chooseCommand(Menu.java:78) ~[classes/:?]
+	at menu.Menu.execute(Menu.java:43) ~[classes/:?]
+	at Main.main(Main.java:24) ~[classes/:?]
+2024-12-16 13:21:56 INFO  - Завершення програми!
